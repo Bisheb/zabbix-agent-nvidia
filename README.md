@@ -1,1 +1,2 @@
 # zabbix-agent-nvidia
+docker run --name zabbix-agent-nvidia --gpus=all -p 10050:10050 --privileged --restart always -v /var/run/docker.sock:/var/run/docker.sock -e ZBX_HOSTNAME="ubuntu69" -e ZBX_SERVER_HOST="10.3.1.212" -d bisheb/zabbix-agent:nvidia
